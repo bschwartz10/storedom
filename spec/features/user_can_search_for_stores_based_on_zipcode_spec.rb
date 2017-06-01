@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "user visits root path and types in zipcode" do
-  xscenario "redirected to stores index page and is shown the 10 closet stores"do
+  scenario "redirected to stores index page and is shown the 10 closet stores"do
     VCR.use_cassette("bb_search_index_page") do
       visit '/'
       fill_in :search, with: "80202"
