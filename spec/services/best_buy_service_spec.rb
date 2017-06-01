@@ -4,8 +4,7 @@ RSpec.describe "find best buy stores by zipcode" do
   it "returns 10 bestbuy stores" do
     VCR.use_cassette("best_buy_find_buy_zip_code") do
       zipcode = "80202"
-      stores = BestBuyService.zip_code_by(zipcode)
-require "pry"; binding.pry
+      stores = BestBuyService.zip_code_by(zipcode)[:stores]
       store1 = stores.first
 
       expect(stores.count).to eq(10)
