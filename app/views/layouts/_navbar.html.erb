@@ -10,6 +10,12 @@
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
+      <div class="form-group search-field">
+        <%= form_tag :search, method: :get do %>
+        <%= text_field_tag :search %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+      </div>
       <li>
         <a href="/">Items</a>
       </li>
