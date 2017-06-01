@@ -9,7 +9,7 @@ RSpec.feature "user visits root path and types in zipcode" do
 
       expect(current_path).to eq("/search")
       expect(page).to have_content("Stores within 25 miles of 80202")
-      # expect(page).to have_content("16 Total Stores")
+      expect(page).to have_content("16 Total Stores")
       expect(page).to have_content("Name: BEST BUY MOBILE - CHERRY CREEK SHOPPING CENTER")
       expect(page).to have_content("Name: BEST BUY - SOUTHGLENN")
       expect(page).to have_content("City: DENVER")
